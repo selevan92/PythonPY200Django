@@ -19,7 +19,7 @@
 					<h4 class="text-center mb-4">
 						Заголовок вашей формы
 					</h4>
-					<form method="post">
+					<form action="", method="post">
                         {% csrf_token %}
 						<!-- Запишите здесь тег {% csrf_token %} -->
 
@@ -48,15 +48,45 @@
                         <!-- Сформируйте и заполните нужные строки ввода (оберните их <div class="form-input"> как показано выше. Это нужно чтобы были одинаковые стили)-->
 
                         <!---- Добавьте еще поле для ввода email (придумайте текст для label)---->
-
+						<label for="my_email">Введите E-mail</label>
+                        <div class="form-input">
+							<span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                            <input type="email" id="my_email" name="my_email" placeholder="E-mail" required></input>
+                        </div>
                         <!---- Добавьте еще поле для ввода пароля (придумайте текст для label)---->
-
+						<label for="my_password">Введите пароль</label>
+                        <div class="form-input">
+							<span><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                            <input type="password" id="my_password" name="my_password" placeholder="Пароль" required></input>
+                        </div>
                         <!---- Добавьте еще поле для ввода даты (придумайте текст для label)---->
-
+						<label for="my_date">Введите дату</label>
+                        <div class="form-input">
+							<span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            <input type="date" id="my_date" name="my_date" placeholder="Дата" required></input>
+                        </div>
                         <!---- Добавьте еще поле для ввода целого значения (придумайте текст для label)---->
-
+						<label for="my_number">Введите целое число</label>
+                        <div class="form-input">
+							<span><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
+                            <input type="number" id="my_number" name="my_number" placeholder="Целое число" required></input>
+                        </div>
                         <!---- Добавьте еще поле для переключателя checkbox (придумайте текст для label)---->
+						<label for="my_switch">Переключатель</label>
+                        <div class="form-input">
+							<span><i class="fa fa-window-restore" aria-hidden="true"></i></span>
+                            <select id="my_switch" name="my_switch" required>
+                                <option value="on">Включить</option>
+                                <option value="do_not_touch">Не трогать</option>
+                                <option value="off">Выключить</option>
+                            </select>
+						</div>
                         <!--------------------------------------------------------------------------------------------->
+						{% if form.errors %}
+							<div class="mb-3 d-flex align-items-center">
+								<span style="color: red; font-size: 16px">{{ form.errors }}</span>
+							</div>
+						{% endif %}
 
                         <!-- В форме всегда присутствует кнопка чтобы что-то отправить. Кнопку не изменять! -->
 						<div class="mb-3"> 
