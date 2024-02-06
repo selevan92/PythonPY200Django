@@ -2,9 +2,9 @@ from django import forms
 
 
 class TemplateForm(forms.Form):
-    name = forms.CharField(max_length=100) # Имя
-    email = forms.EmailField() # E-mail
-    textarea = forms.CharField(widget=forms.Textarea) # Сообщение
+    name = forms.CharField(max_length=100)  # Имя
+    email = forms.EmailField()  # E-mail
+    message = forms.CharField(widget=forms.Textarea)  # Сообщение
 
 """
 Типы полей и их аналоги задаваемые в формах HTML

@@ -1,7 +1,7 @@
 from django.urls import path
 from landing.views import TemplView
 
-app_name = 'landing'
+landing_name = 'landing'
 
 urlpatterns = [
     # TODO добавьте здесь маршрут для вашего обработчика отображения страницы приложения landing

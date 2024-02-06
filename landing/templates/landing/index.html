@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nano Folio - Simple HTML Template</title>
-	<link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}"> <!-- https://fontawesome.com/ -->
+	<link rel="stylesheet" href="{% static 'landing/fontawesome/css/all.min.css' %}"> <!-- https://fontawesome.com/ -->
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
 	<link href="{% static 'landing/css/magnific-popup.min.css' %}" rel="stylesheet">
     <link href="{% static 'landing/css/tooplate-style.css' %}" rel="stylesheet">
@@ -125,13 +125,13 @@ https://www.tooplate.com/view/2122-nano-folio
 				</div>
 			</div>
 			<div class="tm-contact-form-container">
-				<form id="contact-form" action="{% url 'landing:landing_page' %}" method="POST" class="tm-contact-form">
+				<form id="contact-form" action="", method="POST" class="tm-contact-form">
 					{% csrf_token %}
-		          	<input type="text" name="name" placeholder="name" required="" />
-		          	<input type="email" name="email" placeholder="email" required="" />
-		          	<textarea rows="5" name="message" class="tm-mb-30" placeholder="message" required=""></textarea>		          	
-		          	<button type="submit" class="tm-right tm-btn-submit">send</button>          	
-		        </form>    
+		          	<input type="text" id="name" name="name" placeholder="name" required="">
+		          	<input type="email" id="email" name="email" placeholder="email" required="">
+		          	<textarea rows="5" id="message" name="message" class="tm-mb-30" placeholder="message" required=""></textarea>
+		          	<button type="submit" class="tm-right tm-btn-submit">send</button>
+		        </form>
 			</div>
 		</section>
 
